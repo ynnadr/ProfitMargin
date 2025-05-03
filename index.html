@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Keuntungan Kasar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kalkulator Keuntungan Kasar Sederhana</h1>
+        <p>(Untuk Pertanian / Peternakan)</p>
+
+        <form id="profitForm">
+            <div class="input-group">
+                <label for="hasilPenjualan">Total Hasil Penjualan (Rp):</label>
+                <input type="number" id="hasilPenjualan" placeholder="Contoh: 5000000" required min="0" step="any">
+            </div>
+
+            <h2>Biaya Produksi:</h2>
+
+            <div class="input-group">
+                <label for="biayaBenih">Biaya Benih / Bibit (Rp):</label>
+                <input type="number" id="biayaBenih" placeholder="Contoh: 500000" value="0" required min="0" step="any">
+            </div>
+
+            <div class="input-group">
+                <label for="biayaPakanPupuk">Biaya Pakan / Pupuk (Rp):</label>
+                <input type="number" id="biayaPakanPupuk" placeholder="Contoh: 1000000" value="0" required min="0" step="any">
+            </div>
+
+            <div class="input-group">
+                <label for="biayaObat">Biaya Obat / Pestisida (Rp):</label>
+                <input type="number" id="biayaObat" placeholder="Contoh: 200000" value="0" required min="0" step="any">
+            </div>
+
+            <div class="input-group">
+                <label for="biayaTenagaKerja">Biaya Tenaga Kerja (Rp):</label>
+                <input type="number" id="biayaTenagaKerja" placeholder="Contoh: 800000" value="0" required min="0" step="any">
+            </div>
+
+            <div class="input-group">
+                <label for="biayaLain">Biaya Lain-lain (Transport, Sewa, dll) (Rp):</label>
+                <input type="number" id="biayaLain" placeholder="Contoh: 300000" value="0" required min="0" step="any">
+            </div>
+
+            <button type="button" id="hitungButton">Hitung Keuntungan</button>
+        </form>
+
+        <div id="hasilKalkulasi" class="hasil">
+            <h2>Hasil Perhitungan:</h2>
+            <p>Total Biaya Produksi: <strong id="totalBiayaOutput">Rp 0</strong></p>
+            <p>Keuntungan Kasar: <strong id="keuntunganKasarOutput" class="profit">Rp 0</strong></p>
+            <p class="disclaimer">Ini adalah perhitungan kasar. Belum termasuk penyusutan aset, pajak, dan biaya tidak terduga lainnya.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
